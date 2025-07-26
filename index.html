@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>5-Star Restaurant & Lodge</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+
+  <header>
+    <img src="img6" style="border: 50%;" id="item"> <h1 style="font-style: italic" id="heading"> Royal Dine & Stay</h1>
+    <button id="toggleDark">🌙 Dark Mode</button>
+  </header>
+
+  <!-- Menu Section -->
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <h3>Butter Chicken</h3>
+        <p>₹450</p>
+        <button onclick="openModal('Butter Chicken', '₹450', 'Creamy tomato chicken curry')">Details</button>
+      </div>
+      <div class="menu-item">
+        <h3>Paneer Tikka</h3>
+        <p>₹300</p>
+        <button onclick="openModal('Paneer Tikka', '₹300', 'Grilled paneer with spices')">Details</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">×</span>
+      <h3 id="modalTitle"></h3>
+      <p id="modalPrice"></p>
+      <p id="modalDesc"></p>
+    </div>
+  </div>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="dish1" alt="Food 1" /></div>
+        <div class="swiper-slide"><img src="img2.jpg" alt="Food 2" /></div>
+         <div class="swiper-slide"><img src="img3" alt="Food 1" /></div>
+        <div class="swiper-slide"><img src="img4.jpg" alt="Food 2" /></div>
+        <div class="swiper-slide"><img src="img5.jpg" alt="Room" /></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- Lodge Booking -->
+  <section id="booking">
+    <h2>Book Your Stay</h2>
+    <form onsubmit="return validateBooking()">
+      <input type="text" id="guestName" placeholder="Full Name" required />
+      <input type="date" id="checkIn" required />
+      <input type="date" id="checkOut" required />
+      <input type="number" id="rooms" placeholder="No. of Rooms" required />
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Find Us</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18..."
+      width="100%" height="300" style="border:0;" allowfullscreen=""
+    ></iframe>
+  </section>
+
+  <footer>
+    <p>© 2025 Royal Dine & Stay</p>
+  </footer>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
